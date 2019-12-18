@@ -6,12 +6,12 @@ import Image from "../components/image"
 import Layout from "../components/layout"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
 
     <Image />
     <Link to="/404">Go to page 2</Link>
-  </Layout>
+  </>
 )
 
 export default IndexPage

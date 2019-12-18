@@ -1,34 +1,26 @@
-import styled from "styled-components"
-import { up, down, between, only } from 'styled-breakpoints';
 //import {theme} from './theme';
 //TODO: caøyfolder
-export const Container = styled.div`
+export const container = `
 margin-left: auto;
 margin-right: auto;
 width: 50%;
-${up('sm')} {
-    width: 60%;
-  }
+@media (min-width: 375px) {
+  width: 50%;
+}
+@media (min-width: 728px) {
+  width: 60%;
+}
+@media (min-width: 992px) {
+  width: 70%;
+}
+@media (min-width: 1200px){
+  width: 80%;
+}
 
-  ${up('md')} {
-    width: 70%;
-  }
-
-  ${up('lg')} {
-    width: 80%;
-  }
-
-  ${up('xl')} {
-    width: 90%;
-  }
- 
 }
 `
-export const FlexCenter = styled.div`
-display: flex;
-justify-content: center;
-height: ${({height})=>height};
-align-items: center;
+export const flexCenter = `
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
-
-

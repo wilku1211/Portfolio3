@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { theme } from "../utils/theme"
 import Transition from "../utils/transition"
-/* 
 import Header from "./header"
+/* 
 import Footer from "./Footer"
 import SideDrawer from "./SideDrawer"
 import Backdrop from "./Backdrop" */
@@ -39,7 +39,9 @@ const Layout = ({ children, location }) =>
     <ThemeProvider theme={theme}>
       <>
         <StyleGlobal />
-        {/*   <Header />
+        <Header />
+
+        {/*  
         <p onClick={() => setSideDrawer(!showSideDrawer)}>ddsd</p>
         <SideDrawer open={showSideDrawer} closeMenu={sideDrawerClose} />
         <Backdrop show={showSideDrawer} closeMenu={sideDrawerClose} />
@@ -47,6 +49,7 @@ const Layout = ({ children, location }) =>
         <Footer /> */}
 
         <Transition location={location}>
+
           <Main>
             <section>{children}</section>
 

@@ -1,4 +1,5 @@
-export const x = { red: 'red' }
+import styled from "styled-components"
+export const x = { red: "red" }
 
 export const colorsTech = {
   accentColor: "",
@@ -9,13 +10,13 @@ export const colorsTech = {
   black: "#EEEEEE",
 }
 export const colors = {
-  primary: colorsTech.accentColor,//deklaracja musi byc wyżej
+  primary: colorsTech.accentColor, //deklaracja musi byc wyżej
   secondary: colorsTech.secondColor,
   danger: "",
   info: "",
   success: "",
   light: "",
-  dark: ""
+  dark: "",
 }
 
 export const font = {
@@ -26,12 +27,11 @@ export const font = {
   bold: 800,
   fontBase: 1,
   small: 0.75,
-  lead: 1.25
+  lead: 1.25,
 }
 export const breakpoints = {
-  sm: '375px',
-  md: '768px',
-  lg: '992px',
-  xl: '1200px',
+  sm: "@media (min-width: 375px)",
+  md: "@media (min-width: 728px)",
+  lg: "@media (min-width: 992px)",
+  xl: "@media (min-width: 1200px)",
 }
-
