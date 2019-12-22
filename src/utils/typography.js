@@ -2,7 +2,7 @@ import styled from "styled-components"
 export const x = { red: "red" }
 
 export const colorsTech = {
-  accentColor: "",
+  accentColor: "#FFFFFF",
   secondColor: "",
   bodyColor: "",
   bodyBg: "",
@@ -20,7 +20,7 @@ export const colors = {
 }
 
 export const font = {
-  firstFont: "",
+  firstFont: "Times New Roman",
   secondaryFont: "",
   thin: 300,
   regular: 400,
@@ -29,6 +29,8 @@ export const font = {
   small: 0.75,
   lead: 1.25,
 }
+
+//${({ theme }) => theme.breakpoints.xl}
 export const breakpoints = {
   sm: "@media (min-width: 375px)",
   md: "@media (min-width: 728px)",

@@ -1,11 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
 
 const Nav = props => {
   const [open, setOpen] = React.useState(false)
+  const StyleGlobal = createGlobalStyle`
+
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+`
 
   return (
     <WrapperNav>
+      {open && <StyleGlobal />}
       <Hamburger onClick={() => setOpen(!open)} open={open}>
         <span className="burger__box">
           <span className="burger__inner"></span>
@@ -39,7 +50,7 @@ transition-timing-function: ease-in-out;
 const WrapperNav = styled.nav``
 const List = styled.div`
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh; 
   left: 0;
   top: 0;

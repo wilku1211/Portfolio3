@@ -1,5 +1,5 @@
 import { colors, font, media, breakpoints } from "./typography"
-import { container, flexCenter } from "./class"
+import { container, flexCenter, mixinTransition } from "./class"
 
 export const theme = {
   colors: colors,
@@ -9,4 +9,5 @@ export const theme = {
 
   container: container,
   flexCenter: flexCenter,
+  mixinTransition: mixinTransition,
 }

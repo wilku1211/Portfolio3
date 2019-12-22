@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { theme } from "../utils/theme"
 import Transition from "../utils/transition"
 import Header from "./header"
+import Hero from "./main/hero"
 /* 
 import Footer from "./Footer"
 import SideDrawer from "./SideDrawer"
@@ -21,17 +22,14 @@ padding:0;
 }
 `
 
-const Layout = ({ children, location }) =>
-{
+const Layout = ({ children, location }) => {
   const [showSideDrawer, setSideDrawer] = React.useState(false)
 
-  const sideDrawerToggleHandler = () =>
-  {
+  const sideDrawerToggleHandler = () => {
     setSideDrawer(!showSideDrawer)
   }
 
-  const sideDrawerClose = () =>
-  {
+  const sideDrawerClose = () => {
     setSideDrawer(false)
   }
 
@@ -39,7 +37,9 @@ const Layout = ({ children, location }) =>
     <ThemeProvider theme={theme}>
       <>
         <StyleGlobal />
-        <Header />
+        <Header>
+          <Hero />
+        </Header>
 
         {/*  
         <p onClick={() => setSideDrawer(!showSideDrawer)}>ddsd</p>
@@ -49,11 +49,7 @@ const Layout = ({ children, location }) =>
         <Footer /> */}
 
         <Transition location={location}>
-
-          <Main>
-            <section>{children}</section>
-
-          </Main>
+          <Main>{children}</Main>
         </Transition>
       </>
     </ThemeProvider>
@@ -63,15 +59,6 @@ const Layout = ({ children, location }) =>
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-const Main = styled.main`
-  max-width: 1000px;
-  margin: 0 auto;
-  transition: 0.3s ease-in-out;
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: calc(72% - 1em) calc(28% - 1.5em);
-    grid-column-gap: 2.5em;
-  }
-`
+const Main = styled.main``
 
 export default Layout

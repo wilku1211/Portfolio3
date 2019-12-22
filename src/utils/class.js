@@ -19,8 +19,15 @@ width: 50%;
 
 }
 `
+//${({ theme }) => theme.flexCenter}
 export const flexCenter = `
   display: flex;
   justify-content: center;
   align-items: center;
+`
+//${({ theme }) => theme.mixinTransition}
+export const mixinTransition = props => `
+transition-property: transform , opacity;
+transition-duration: ${props ? props.duration : "0.3s"};
+transition-timing-function: ease-in-out;
 `
