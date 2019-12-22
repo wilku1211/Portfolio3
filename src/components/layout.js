@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { theme } from "../utils/theme"
 import Transition from "../utils/transition"
 import Header from "./header"
-import Hero from "./main/hero"
+import Hero from "./header/hero"
 /* 
 import Footer from "./Footer"
 import SideDrawer from "./SideDrawer"

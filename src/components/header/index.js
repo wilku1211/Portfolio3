@@ -3,16 +3,16 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Nav from "./nav"
+import { P } from "../../utils/tags"
 
 const Header = ({ children }) => {
   return (
     <Wrapper>
       <Menu>
-        <Link to="/" className="logo">
-          {" "}
-          logo
-        </Link>
         <Nav />
+        <Lang>
+          <button>eng/pl</button>
+        </Lang>
       </Menu>
 
       {children}
@@ -40,9 +40,10 @@ const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  z-index: 101;
 
   ${({ theme }) => theme.container}
-  .logo {
-    z-index: 101;
-  }
+`
+const Lang = styled.div`
+  z-index: 101;
 `

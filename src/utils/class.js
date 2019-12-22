@@ -5,7 +5,7 @@ margin-left: auto;
 margin-right: auto;
 width: 50%;
 @media (min-width: 375px) {
-  width: 50%;
+  width: 80%;
 }
 @media (min-width: 728px) {
   width: 60%;

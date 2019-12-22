@@ -37,7 +37,7 @@ body{
 
 const mixin = props => `
 position: absolute;
-border: hsl(0, 0%, 0%) 1px solid;
+border:#FFFFFF 1px solid;
 height: 1px;
 `
 
@@ -50,7 +50,7 @@ transition-timing-function: ease-in-out;
 const WrapperNav = styled.nav``
 const List = styled.div`
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh; 
   left: 0;
   top: 0;
@@ -58,9 +58,11 @@ const List = styled.div`
   z-index: 100;
   ${mixinTransition}
   transform: ${props =>
-    props.open ? "translateY(0vh)" : "translateY(-100vh)"};
+    props.open ? "translateY(0vh)" : "translateY(-110vh)"};
+ul{
 
-    ${({ theme }) => theme.flexCenter}
+  ${({ theme }) => theme.flexCenter}
+}
 `
 
 const Hamburger = styled.button`
@@ -90,12 +92,12 @@ transition-timing-function: ease-in-out;
 
   border:${props => (props.open ? "0px" : "")};
   width:30px;
-  right: 0;
+  left: 1;
 
   ::before, ::after{
     content:'';
     ${mixin}
-    right: -1px;
+    left: 0px;
 
   }
   ::before{
@@ -108,8 +110,9 @@ transition-timing-function: ease-in-out;
 
   }
   ::after{
+    
     top:8px;
-    width:${props => (props.open ? "30px" : "20px")};;
+    width:${props => (props.open ? "28px" : "20px")};;
     ${mixinTransition("width, transform ")}
     transform:${props =>
       props.open ? "translateY(-8px) rotate(-135deg)" : ""}; 

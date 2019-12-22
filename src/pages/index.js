@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 import Image from "../components/image"
-import Hero from "../components/main/hero"
 
 const IndexPage = () => (
   <>

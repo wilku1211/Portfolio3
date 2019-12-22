@@ -3,25 +3,31 @@ import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import image from "../../assets/images/1.jpg"
 import { H1, P } from "../../utils/tags"
-import posed from "react-pose"
+import Social from "../social"
 
 const Hero = props => {
   return (
     <WrapperHero>
       <Hero__Image />
       <H1>Hej jestem Maksymilan </H1>
-      <P>
-        chciałbym pokazac ci moje skile <span>poznaj mnie</span>
-      </P>
+
+      <Subtitile>
+        <P>
+          Poszukuję pracy jako
+          <br /> Junior React Developer
+        </P>
+        <P>Sprawdz co potrafie</P>
+      </Subtitile>
+
       <p>media</p>
       <p>odnosnik do sekcji I</p>
-
-      <svg>
+      <Social />
+      <Arrow>
         <polygon
           class="arrow-bottom"
           points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
         />
-      </svg>
+      </Arrow>
       <Triangle>
         <div></div>
         <div></div>
@@ -46,38 +52,55 @@ function jumpingBuilder(procent) {
 }
 
 const WrapperHero = styled.section`
-  svg {
-    position: absolute;
-    animation: ${jumpingBuilder(30)} 1s ease-in 0s infinite alternate none
-      running;
-    width: 75px;
-    height: 65px;
-    bottom: 19%;
-    opacity: 0.5;
-    right: 1%;
-    polygon {
-      transform: scale(0.5);
-      fill: hsl(0, 0%, 100%);
-      transition: all 0.2s ease-out;
-    }
-  }
-
   perspective: 100px;
   position: relative;
   margin: -80px 0 0;
   width: 100%;
   height: 100vh;
   background-color: hsl(0, 0%, 6%);
+
   h1 {
-    text-align: right;
+    text-align: center;
+    padding: 80px 0 0;
     margin: 0 10px 16px 0;
-    padding: 25px 0 0;
+
+    font-size: 50px;
+    text-align: center;
   }
-  p {
-    text-align: right;
-    margin: 0 10px 16px 0;
+
+
+
+  [class*="social__Wrapper"]{
+    opacity: 0.5;
+    position: absolute;
+    right: 33px;
+    bottom: 198px;
+
+}
   }
 `
+
+const Subtitile = styled.div`
+  transform: translateY(50px);
+  line-height: 1.5;
+
+  margin: 10px 30px 0 30px;
+`
+const Arrow = styled.svg`
+  position: absolute;
+  animation: ${jumpingBuilder(30)} 1s ease-in 0s infinite alternate none running;
+  width: 75px;
+  height: 65px;
+  bottom: 19%;
+  opacity: 0.5;
+  right: 1%;
+  polygon {
+    transform: scale(0.5);
+    fill: hsl(0, 0%, 100%);
+    transition: all 0.2s ease-out;
+  }
+`
+
 const Hero__Image = styled.div`
   opacity: 0.3;
   width: 100vw;
