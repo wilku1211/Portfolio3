@@ -1,8 +1,6 @@
 import React from "react"
 
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { P } from "../utils/tags"
 
 const Social = props => {
   return (
@@ -29,7 +27,7 @@ const Social = props => {
           </a>
         </li>
         <li>
-          <a>
+          <a href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50px"

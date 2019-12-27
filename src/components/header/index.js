@@ -1,9 +1,7 @@
 import React from "react"
 
 import styled from "styled-components"
-import { Link } from "gatsby"
 import Nav from "./nav"
-import { P } from "../../utils/tags"
 
 const Header = ({ children }) => {
   return (

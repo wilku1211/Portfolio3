@@ -1,5 +1,4 @@
 //brak dostempu do theme przez props
-import React from "react"
 import styled from "styled-components"
 import { theme } from "./theme"
 

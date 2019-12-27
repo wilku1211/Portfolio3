@@ -23,16 +23,16 @@ padding:0;
 `
 
 const Layout = ({ children, location }) => {
-  const [showSideDrawer, setSideDrawer] = React.useState(false)
+  //const [showSideDrawer, setSideDrawer] = React.useState(false)
 
-  const sideDrawerToggleHandler = () => {
+  /*   const sideDrawerToggleHandler = () => {
     setSideDrawer(!showSideDrawer)
   }
 
   const sideDrawerClose = () => {
     setSideDrawer(false)
   }
-
+ */
   return (
     <ThemeProvider theme={theme}>
       <>

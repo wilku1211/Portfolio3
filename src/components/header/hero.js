@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import image from "../../assets/images/1.jpg"
 import { H1, P } from "../../utils/tags"
@@ -8,7 +7,7 @@ import Social from "../social"
 const Hero = props => {
   return (
     <WrapperHero>
-      <Hero__Image />
+      <HeroImage />
       <H1>Hej jestem Maksymilan </H1>
 
       <Subtitile>
@@ -101,7 +100,7 @@ const Arrow = styled.svg`
   }
 `
 
-const Hero__Image = styled.div`
+const HeroImage = styled.div`
   opacity: 0.3;
   width: 100vw;
   background: url(${image});

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 const Nav = props => {
   const [open, setOpen] = React.useState(false)
