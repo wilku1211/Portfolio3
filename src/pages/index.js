@@ -7,6 +7,7 @@ import Image from "../components/image"
 const IndexPage = () => (
   <>
     <SEO title="Home" />
+    {/* d */}
 
     <Image />
     <Link to="/404">Go to page 2</Link>
